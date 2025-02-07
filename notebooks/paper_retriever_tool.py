@@ -9,6 +9,7 @@ from pathlib import Path
 from urllib.parse import urlparse
 import hashlib
 import re
+import sqlite3
 
 logger = logging.getLogger(__name__)
 
@@ -19,9 +20,9 @@ BASE_URL= "http://export.arxiv.org/api/query?"
 
 
 @tool
-def fetch_ariv_papers(search_query:str, max_results: Optional[int]=5)->str:
+def fetch_arxiv_papers(search_query:str = None, max_results: Optional[int]= None)->str:
     """
-    Searches ariv for research papers on a topic and saved teh papers to a folder
+    Searches arXiv for research papers on a topic and saved teh papers to a folder
     Args:
         search_query: the topic to search for
         max_results: max results to return
@@ -33,14 +34,14 @@ def fetch_ariv_papers(search_query:str, max_results: Optional[int]=5)->str:
 
     # Fetch and parse papers
     print(f"Searching for papers on '{search_query}'...")
-    response_text = fetch_arxiv_papers(search_query, max_results)
-    papers = parse_paper_links(response_text)
+    response_text = _search_arxiv_papers(search_query, max_results)
+    papers = _parse_paper_links(response_text)
 
     # Download each paper
     print(f"Found {len(papers)} papers. Starting download...")
     for title, pdf_link in papers:
         try:
-            download_paper(title, pdf_link, OUTPUT_FOLDER)
+            _download_paper(title, pdf_link, OUTPUT_FOLDER)
             time.sleep(2)  # Pause to avoid hitting rate limits
         except Exception as e:
             print(f"Failed to download '{title}': {e}")
@@ -48,20 +49,40 @@ def fetch_ariv_papers(search_query:str, max_results: Optional[int]=5)->str:
 
 
 
-def sanitize_filename(title):
+def _get_papers_db():
+    """Loads the papers database from a file."""
+    db_name = "papers.db"
+    conn = sqlite3.connect(db_name)
+    cursor = conn.cursor()
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS papers (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            search_query TEXT,  -- Add search query column
+            title TEXT UNIQUE,
+            pdf_link TEXT,
+            file_path TEXT,
+            file_hash TEXT,
+            file_content BLOB  -- Add file content column
+        )
+    """)
+    conn.commit()
+    return conn, cursor
+
+
+def _sanitize_filename(title):
     """Sanitizes a string to be used as a filename."""
     # Remove any characters that are not alphanumeric, spaces, hyphens, or underscores
     return re.sub(r"[^\w\s-]", "", title).strip().replace(" ", "_")
 
 
-def get_filename_from_url(url):
+def _get_filename_from_url(url):
     # Parse the URL to get the path component
     parsed_url = urlparse(url)
     # Get the base name from the URL's path
     filename = os.path.basename(parsed_url.path)
     return filename
 
-def compute_file_hash(file_path, algorithm="sha256"):
+def _compute_file_hash(file_path, algorithm="sha256"):
     """Compute the hash of a file using the specified algorithm."""
     hash_func = hashlib.new(algorithm)
 
@@ -72,7 +93,7 @@ def compute_file_hash(file_path, algorithm="sha256"):
 
     return hash_func.hexdigest()
 
-def fetch_arxiv_papers(search_query, max_results=5):
+def _search_arxiv_papers(search_query, max_results=5):
     """Fetches metadata of papers from arXiv using the API."""
     url = f"{BASE_URL}search_query=all:{search_query}&start=0&max_results={max_results}"
     response = requests.get(url)
@@ -80,7 +101,7 @@ def fetch_arxiv_papers(search_query, max_results=5):
     return response.text
 
 
-def parse_paper_links(response_text):
+def _parse_paper_links(response_text):
     """Parses paper links and titles from arXiv API response XML."""
     import xml.etree.ElementTree as ET
 
@@ -93,16 +114,16 @@ def parse_paper_links(response_text):
                 pdf_link = link.attrib["href"] + ".pdf"
                 break
         if pdf_link:
-            title = get_filename_from_url(pdf_link)
+            title = _get_filename_from_url(pdf_link)
             print(title)
             papers.append((title, pdf_link))
     return papers
 
 
-def download_paper(title, pdf_link, output_folder):
+def _download_paper(title, pdf_link, output_folder):
     """Downloads a single paper PDF."""
     # Create a safe filename
-    safe_title = sanitize_filename(title)
+    safe_title = _sanitize_filename(title)
     filename = os.path.join(output_folder, f"{safe_title}.pdf")
     response = requests.get(pdf_link, stream=True)
     response.raise_for_status()
@@ -116,8 +137,7 @@ def download_paper(title, pdf_link, output_folder):
 
 
 
-
-result = fetch_ariv_papers(search_query="Cellular Automata")
+result = fetch_arxiv_papers(search_query="Cellular Automata")
 print(result)
 
 

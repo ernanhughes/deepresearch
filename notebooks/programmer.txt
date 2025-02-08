@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta name="generator" content="Hugo 0.120.4">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Programmer.ie: Modern AI programming</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="Ernan Hughes Personal blog about the future">
+		<meta property="og:title" content="Programmer.ie: Modern AI programming" />
+<meta property="og:description" content="Ernan Hughes Personal blog about the future" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://programmer.ie/" />
+
+
+		<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Programmer.ie: Modern AI programming"/>
+<meta name="twitter:description" content="Ernan Hughes Personal blog about the future"/>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<link rel="alternate" type="application/rss+xml" href="/index.xml" title="Programmer.ie: Modern AI programming">
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4CM6BHM78G"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-4CM6BHM78G', { 'anonymize_ip': false });
+}
+</script>
+
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="Programmer.ie: Modern AI programming" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">Programmer.ie: Modern AI programming</div>
+					<div class="logo__tagline">A site about AI programming</div>
+				</div>
+		</a>
+	</div>
+		<div class="divider"></div>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main list" role="main">
+	<article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/post/deepresearch/" rel="bookmark">
+			DeepResearch Part 1: Building an arXiv Search Tool with SmolAgents
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/ai/" rel="category">AI</a>, <a class="meta__link" href="/categories/deep-learning/" rel="category">Deep Learning</a>, <a class="meta__link" href="/categories/arxiv/" rel="category">arXiv</a>, <a class="meta__link" href="/categories/smolagents/" rel="category">smolagents</a>, <a class="meta__link" href="/categories/python/" rel="category">Python</a>
+	</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-02-07T08:33:23Z">February 07, 2025</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		Summary This post kicks off a series of three where we&rsquo;ll build, extend, and use the open-source DeepResearch application inspired by the Hugging Face blog post. In this first part, we&rsquo;ll focus on creating an arXiv search tool that can be used with SmolAgents.
+DeepResearch aims to empower research by providing tools that automate and streamline the process of discovering and managing academic papers. This series will demonstrate how to build such tools, starting with a powerful arXiv search tool.
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/post/ffmpeg/" rel="bookmark">
+			FFmpeg: A Practical Guide to Essential Command-Line Options
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/video-processing/" rel="category">Video Processing</a>, <a class="meta__link" href="/categories/ffmpeg/" rel="category">FFmpeg</a>, <a class="meta__link" href="/categories/command-line/" rel="category">Command Line</a>, <a class="meta__link" href="/categories/multimedia/" rel="category">Multimedia</a>
+	</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-02-06T13:38:55Z">February 06, 2025</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		Introduction FFmpeg is an incredibly versatile command-line tool for manipulating audio and video files. This post provides a practical collection of useful FFmpeg commands for common tasks.
+FFmpeg Command Structure The general structure of an FFmpeg command is:
+ffmpeg [global_options] {[input_file_options] -i input_url} ... {[output_file_options] output_url} ... Merging Video and Audio Merging video and audio, with audio re-encoding ffmpeg -i video.mp4 -i audio.wav -c:v copy -c:a aac output.mp4 Copying the audio without re-encoding ffmpeg -i video.
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/post/pytorch/" rel="bookmark">
+			Writing Neural Networks with PyTorch
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/deep-learning/" rel="category">Deep Learning</a>, <a class="meta__link" href="/categories/pytorch/" rel="category">PyTorch</a>, <a class="meta__link" href="/categories/neural-networks/" rel="category">Neural Networks</a>, <a class="meta__link" href="/categories/ai/" rel="category">AI</a>
+	</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-02-06T08:44:07Z">February 06, 2025</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		Summary This post provides a practical guide to building common neural network architectures using PyTorch. We&rsquo;ll explore feedforward networks, convolutional neural networks (CNNs), recurrent neural networks (RNNs), LSTMs, transformers, autoencoders, and GANs, along with code examples and explanations.
+1. Understanding PyTorch&rsquo;s Neural Network Module PyTorch provides the torch.nn module to build neural networks. It provides classes for defining layers, activation functions, and loss functions, making it easy to create and manage complex network architectures in a structured way.
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/post/prompt/" rel="bookmark">
+			Mastering Prompt Engineering: A Practical Guide
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/ai/" rel="category">AI</a>, <a class="meta__link" href="/categories/llms/" rel="category">LLMs</a>, <a class="meta__link" href="/categories/prompt-engineering/" rel="category">Prompt Engineering</a>, <a class="meta__link" href="/categories/machine-learning/" rel="category">Machine Learning</a>
+	</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-02-05T14:58:04Z">February 05, 2025</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		Summary This post provides a comprehensive guide to prompt engineering, the art of crafting effective inputs for Large Language Models (LLMs). Mastering prompt engineering is crucial for maximizing the potential of LLMs and achieving desired results.
+Effective prompting is the easiest way to enhance your experience with Large Language Models (LLMs).
+The prompts we make are our interface to LLMs. This is how we communicate with them. This is why it is important to understand how to do it well.
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/post/sd_webui/" rel="bookmark">
+			Harnessing the Power of Stable Diffusion WebUI
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/ai/" rel="category">AI</a>, <a class="meta__link" href="/categories/stable-diffusion/" rel="category">Stable Diffusion</a>, <a class="meta__link" href="/categories/image-generation/" rel="category">Image Generation</a>, <a class="meta__link" href="/categories/open-source/" rel="category">Open Source</a>
+	</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-02-05T12:39:16Z">February 05, 2025</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		Summary In this blog I aim to try building using open source tools where possible. The benefits are price, control, knowledge and eventually quality. In the shorter term though the quality will trail the paid versions. My belief is we can construct AI applications to be self correcting sort of like how your camera auto focuses for you. This process will involve a lot of computation so using a paid service could be costly.
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/post/wav_to_text/" rel="bookmark">
+			Paper Video Producer: Convert a paper to a video using AI
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/ai/" rel="category">AI</a>, <a class="meta__link" href="/categories/ollama/" rel="category">ollama</a>, <a class="meta__link" href="/categories/video/" rel="category">Video</a>, <a class="meta__link" href="/categories/whisper/" rel="category">Whisper</a>
+	</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-01-31T11:09:13Z">January 31, 2025</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		Summary In this post I will show you how to turn a scientific paper into a youtube video. You can use thie process to build a video for any audio or text.
+Initially I use NotebookLLM to convert a document or collection of documents into an audio blog post. I use a whisper-timestamped to convert this audio file to text. It will add timestamps and confidence to the generated text. I store the results from this library into an sqlite database.
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/post/poisson/" rel="bookmark">
+			Fast Poisson Disk Sampling in Arbitrary Dimensions
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/cellular-automata/" rel="category">Cellular Automata</a>
+	</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-01-28T15:01:00Z">January 28, 2025</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		Summary In this post I explore Robert Bridson&rsquo;s paper: Fast Poisson Disk Sampling in Arbitrary Dimensions and provide an example python implementation. Additionally, I introduce an alternative method using Cellular Automata to generate Poisson disk distributions.
+Poisson disk sampling is a widely used technique in computer graphics, particularly for applications like rendering, texture generation, and particle simulation. Its appeal lies in producing sample distributions with &ldquo;blue noise&rdquo; characteristicsârandom yet evenly spaced, avoiding clustering.
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/post/activation/" rel="bookmark">
+			Activation Functions
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/ai/" rel="category">AI</a>
+	</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-01-28T09:16:10Z">January 28, 2025</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		Introduction Activation functions are a component of neural networks they introduce non-linearity into the model, enabling it to learn complex patterns. Without activation functions, a neural network would essentially act as a linear model, regardless of its depth.
+Key Properties of Activation Functions Non-linearity: Enables the model to learn complex relationships. Differentiability: Allows backpropagation to optimize weights. Range: Defines the output range, impacting gradient flow. In this post I will outline each of the most common activation functions how they are calculated and when they should be used.
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/post/svm/" rel="bookmark">
+			SVM Support Vector Machine an introduction
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/ai/" rel="category">AI</a>, <a class="meta__link" href="/categories/svm/" rel="category">SVM</a>
+	</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-01-27T14:41:41Z">January 27, 2025</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		Summary In this post I will implement a Support Vector Machine (SVM) in python. Then describe what it does how it does it and some applications of the instrument.
+What Are Support Vector Machines (SVM)? Support Vector Machines (SVM) are supervised learning algorithms used for classification and regression tasks. Their strength lies in handling both linear and non-linear problems effectively. By finding the optimal hyperplane that separates classes, SVMs maximize the margin between data points of different classes, making them highly effective in high-dimensional spaces.
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/post/color_wars/" rel="bookmark">
+			Color wars: Cellular Automata fight until one domiates
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/cellular-automata/" rel="category">Cellular Automata</a>
+	</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-01-21T11:53:56Z">January 21, 2025</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		Summary This post is about color wars: a grid containing dynamic automata at war until one dominates.
+Implementation The implementation consists of two core components: the Grid and the CellularAutomaton.
+1. CellularAutomaton Class The CellularAutomaton class represents individual entities in the grid. Each automaton has:
+Attributes: ID, strength, age, position. Behavior: Updates itself by aging, reproducing, or dying based on simple rules. 2. Grid Class The Grid manages a collection of automata.
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/post/questions2/" rel="bookmark">
+			More Machine Learning Questions and Answers with Python examples
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/ai/" rel="category">AI</a>, <a class="meta__link" href="/categories/questions/" rel="category">Questions</a>
+	</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-01-20T20:25:03Z">January 20, 2025</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		44. What does it mean to Fit a Model? Answer
+Fitting a model refers to the process of adjusting the model&rsquo;s internal parameters to best match the given training data. It&rsquo;s like tailoring a suit â you adjust the fabric and stitching to make it fit the wearer perfectly.
+Key Terms:
+Model: A mathematical representation that captures patterns in data. Examples include linear regression, decision trees, neural networks, etc.
+Parameters: These are the internal variables within the model that determine its behavior.
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/post/traffic/" rel="bookmark">
+			Cellular Automata: Traffic Flow Simulation using the Nagel-Schreckenberg Model
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/cellular-automata/" rel="category">Cellular Automata</a>
+	</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-01-18T16:38:07Z">January 18, 2025</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		Summary The Nagel-Schreckenberg (NaSch) model is a traffic flow model which uses used cellular automata to simulate and predict traffic on roads.
+Design of the Nagel-Schreckenberg Model Discrete Space and Time:
+The road is divided into cells, each representing a fixed length (e.g., a few meters). Time advances in discrete steps. Vehicle Representation:
+Each cell is either empty or occupied by a single vehicle. Each vehicle has a velocity (an integer) which determines how many cells it moves in a single time step.
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/post/shell/" rel="bookmark">
+			Simulate Gastropod Shell Growth Using Cellular Automata
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/cellular-automata/" rel="category">Cellular Automata</a>
+	</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-01-18T03:03:36Z">January 18, 2025</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		Summary I started with this paper A developmentally descriptive method forquantifying shape in gastropod shells and bridged the results to a cellular automata approach.
+An example of the shell we are modelling: Steps 1. Identify the Key Biological Features The paper outlines the logarithmic helicospiral model for shell growth, where:
+The shell grows outward and upward in a spiral shape. Parameters like width growth ((g_w)), height growth ((g_h)), and aperture shape dictate the final form.
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/post/ca/" rel="bookmark">
+			Cellular Automata: Introduction
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/cellular-automata/" rel="category">Cellular Automata</a>
+	</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-01-16T00:21:05Z">January 16, 2025</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		Summary This page is the first in a series of posts about Cellular Automata.
+I believe that we could get the first evidence of AI through cellular automata.
+A recent paper Intelligence at the Edge of Chaos found that LLM&rsquo;s trained on more complex data generate better results. Which makes sense in a human context like the harder the material is I study the smarter I get. We need to find out why this is also the case with machines.
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/post/rag/" rel="bookmark">
+			Rag: Retrieval-Augmented Generation 
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/ai/" rel="category">AI</a>, <a class="meta__link" href="/categories/rag/" rel="category">RAG</a>, <a class="meta__link" href="/categories/smolagents/" rel="category">smolagents</a>
+	</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-01-14T14:40:59Z">January 14, 2025</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		Summary Retrieval-Augmented Generation (RAG) is a powerful technique that enhances large language models (LLMs) by allowing them to use external knowledge sources.
+An Artificial Intelligence (AI) system consists of components working together to apply knowledge learned from data. Some common components of those systems are:
+Large Language Model (LLM): Typically the core component of the system, often there is more than one. These are large models that have been trained on massive amounts of data and can make intelligent predictions based on their training.
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/post/cag/" rel="bookmark">
+			CAG: Cache-Augmented Generation
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/ai/" rel="category">AI</a>, <a class="meta__link" href="/categories/rag/" rel="category">RAG</a>, <a class="meta__link" href="/categories/smolagents/" rel="category">smolagents</a>
+	</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-01-10T20:32:03Z">January 10, 2025</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		Summary CAG performs better but does not solve the key reason RAG was created small context windows.
+Retrieval-Augmented Generation (RAG) is currently(early 2025) the most popular way to use external knowledge in current LLM opperations. RAG allows you to enhance your LLM with data beyond the data it was trained on. Ther are many great RAG solutions and products.
+RAG has some drawbacks - There can be significant retreival latency as it searches for and organizes the correct data.
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/post/agents/" rel="bookmark">
+			Agents: A tutorial on building agents in python
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/ai/" rel="category">AI</a>, <a class="meta__link" href="/categories/agents/" rel="category">agents</a>, <a class="meta__link" href="/categories/smolagents/" rel="category">smolagents</a>
+	</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-01-07T16:51:43Z">January 07, 2025</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		LLM Agents Agents are used enhance and extend the functionality of LLM&rsquo;s.
+In this tutorial, weâll explore what LLM agents are, how they work, and how to implement them in Python.
+What Are LLM Agents? An agent is an autonomous process that may use the LLM and other tools multiple times to achieve a goal. The LLM output often controls the workflow of the agent(s).
+What is the difference between Agents and LLMs or AI?
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/post/courses/" rel="bookmark">
+			Courses: Free course on Agentic AI
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/ai/" rel="category">AI</a>, <a class="meta__link" href="/categories/agents/" rel="category">agents</a>, <a class="meta__link" href="/categories/courses/" rel="category">courses</a>
+	</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-01-07T16:11:41Z">January 07, 2025</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		Some FREE AI courses on Agents I recommend doing Agents were important in Machine Learning development last year.
+These are some courses I have done and recommend they are all free.
+A good reason to do courses and look at youtube videos is you will learn current applications of AI and may get ideas for new applications.
+AI Agentic Design Patterns with AutoGen AI Agentic Design Patterns with AutoGen
+Topics: Agents, Microsoft, Autogen.
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/post/ollama/" rel="bookmark">
+			Ollama: The local LLM solution
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/ai/" rel="category">AI</a>, <a class="meta__link" href="/categories/ollama/" rel="category">ollama</a>
+	</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-01-06T19:52:16Z">January 06, 2025</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		Using Ollama Introduction Ollama is the best platform for running, managing, and interacting with Large Language Models (LLM) models locally. For Python programmers, Ollama offers seamless integration and robust features for querying, manipulating, and deploying LLMs. In this post I will explore how Python developers can leverage Ollama for powerful and efficient AI-based workflows.
+1. What is Ollama? Ollama is a tool designed to enable local hosting and interaction with LLMs.
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/post/hugo/" rel="bookmark">
+			Hugo: A Static Site Generator
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-01-06T17:34:21Z">January 06, 2025</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		Hugo: A Static Site Generator In this post I give an introduction to what I think is the best static site generator: Hugo.
+What is Hugo? Hugo is an open-source static site generator written in Go. It takes structured content, often written in Markdown, and compiles it into static HTML, CSS, and JavaScript files.
+Setting Up Hugo: A Quickstart Guide Follow these steps to set up your first Hugo site
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/post/acdb/" rel="bookmark">
+			Project 8: acdb a super fast database for Android
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2016-05-19T23:45:48&#43;01:00">May 19, 2016</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>An android implementation of [CDB] (<a href="https://cr.yp.to/cdb.html">https://cr.yp.to/cdb.html</a>) database.
+With some simple testing I am seeing a five to ten times increase in speed over Sqlite</p>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/post/fx-trader/" rel="bookmark">
+			Project 7: FX-Trader
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2016-05-12T23:45:48&#43;01:00">May 12, 2016</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>A derivatives trading system. This is my attempt at building a derivatives trading system.
+In this first post I am going to outline the goals of the project and some of the early design decisions.</p>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/post/validator/" rel="bookmark">
+			Project 6: Validator
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/android/" rel="category">Android</a>
+	</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2016-04-28T23:45:48&#43;01:00">April 28, 2016</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>A validation tool for excel files. Sometimes you need to export data from one system for loading into another. For instance
+you may export a report from a derivatives trading system for information for a collateral management system.</p>
+<p>This Excel macro file validates input files to make sure that they are in a specific format.
+The input file can be in any format that excel can load. The workbook will load the file and check for errors in place.</p>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/post/dictator/" rel="bookmark">
+			Project 5: Dictator
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/android/" rel="category">Android</a>
+	</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2016-03-28T23:45:48&#43;01:00">March 28, 2016</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>Google have just released their speech API. One really cool feature is the ability to transcribe voice in real time.
+Two years ago I built an app with this idea in mind. At that at the time I could no make it work. Now it is time to resurrect that app.
+This post will cover the recording section of that application.</p>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/post/meth/" rel="bookmark">
+			Project 4: Meth
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/android/" rel="category">Android</a>
+	</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2016-03-08T20:46:38Z">March 08, 2016</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>This is another simple android application. It does one thing
+It keeps your phone awake.</p>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/post/site_shot/" rel="bookmark">
+			Project 3: Site Shot
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/android/" rel="category">Android</a>
+	</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2016-02-03T20:46:38Z">February 03, 2016</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>This is a really simple android application. It does one thing
+It takes a photo of a web site and allows you to share the photo.</p>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/post/image_script/" rel="bookmark">
+			A script to generate android images
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2016-02-03T20:27:15Z">February 03, 2016</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		This is a script I use in my android projects to generate different sized images.
+You can find the script here process.vbs
+So I build all my images in inkscape.
+This is brilliant application.
+You can find some brilliant tutorials here heathenx
+The script uses inkscape to convert the svg files to png images of different sizes.
+The script also use imagemajic to format the pngs nicely.
+Finally it compresses the result using two png crushing programs
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/post/simple_log/" rel="bookmark">
+			A simple android log class
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2016-02-01T23:00:08Z">February 01, 2016</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>This is a very simple log class I reuse in my projects</p>
+<p>It is  a hybrid of <a href="https://github.com/JakeWharton/timber" title="Timber">Timber</a> by Jake Wharton and the Log in
+<a href="https://github.com/nostra13/Android-Universal-Image-Loader" title="Android Universal Image Loader">Android Universal Image Loader</a> by Sergey Tarasevich</p>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/post/everything/" rel="bookmark">
+			Everything
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2016-01-31T14:39:14Z">January 31, 2016</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>I think that this tool is the best search tool for windows.</p>
+<p><a href="https://www.voidtools.com/downloads/" title="Everything">Everything</a></p>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/post/android_settings/" rel="bookmark">
+			An android SharedPreferences wrapper class
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/android/" rel="category">Android</a>
+	</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2016-01-31T00:08:26Z">January 31, 2016</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>This is a wrapper around the Android <a href="http://developer.android.com/reference/android/content/SharedPreferences.html" title="SharedPreferences">SharedPreferences</a></p>
+<p>It adds a few useful extensions</p>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/post/blog_tools/" rel="bookmark">
+			Tools I use for this Blog
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2016-01-30T19:19:19Z">January 30, 2016</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>In this post I am going to share some of the tools I currently use to build the blog.</p>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/post/fileexplorer/" rel="bookmark">
+			Project 2: File Explorer for android
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/android/" rel="category">Android</a>
+	</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2016-01-30T00:13:56Z">January 30, 2016</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>In this project I am building a file explorer library for android.
+As I was working on <a href="https://github.com/ernan/catcher" title="Catcher">catcher</a> it became obvious I would need a file picker
+and explorer solution. So I did a bit of looking on the web.
+I found three interesting projects that nearly did what I wanted. I put a few of them together to come up with a hybrid solution.</p>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/post/catcher/" rel="bookmark">
+			Project 1: Catcher
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/android/" rel="category">Android</a>
+	</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2016-01-25T22:06:44Z">January 25, 2016</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>This is an android application to transfer files from your phone to somewhere else. I will be built as a PC solution but
+can be used for a server solution also.</p>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/post/ai/" rel="bookmark">
+			
+			</a>
+		</h2>
+		
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		AI Is the Interface: The Future of Human-Technology Interaction
+Technology is the bridge that transforms data into knowledge.
+In the coming years, artificial intelligence will evolve from being a tool that assists humans to becoming the primary interface through which we interact with technology and process information. The future of human-computer interaction will not be through keyboards, touchscreens, or even direct programmingâit will be mediated by AI systems that understand, interpret, and execute our intentions seamlessly.
+	</div>
+</article>
+</main>
+
+
+			</div>
+			<aside class="sidebar"><div class="widget-search widget">
+	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
+		<input class="widget-search__field" type="search" placeholder="Searchâ¦" value="" name="q" aria-label="Searchâ¦">
+		<input class="widget-search__submit" type="submit" value="Search">
+		<input type="hidden" name="sitesearch" value="http://programmer.ie/">
+	</form>
+</div>
+<div class="widget-recent widget">
+	<h4 class="widget__title">Recent Posts</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/deepresearch/">DeepResearch Part 1: Building an arXiv Search Tool with SmolAgents</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/ffmpeg/">FFmpeg: A Practical Guide to Essential Command-Line Options</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/pytorch/">Writing Neural Networks with PyTorch</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/prompt/">Mastering Prompt Engineering: A Practical Guide</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/sd_webui/">Harnessing the Power of Stable Diffusion WebUI</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/wav_to_text/">Paper Video Producer: Convert a paper to a video using AI</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/poisson/">Fast Poisson Disk Sampling in Arbitrary Dimensions</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/activation/">Activation Functions</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/svm/">SVM Support Vector Machine an introduction</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/color_wars/">Color wars: Cellular Automata fight until one domiates</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/questions2/">More Machine Learning Questions and Answers with Python examples</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/traffic/">Cellular Automata: Traffic Flow Simulation using the Nagel-Schreckenberg Model</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/shell/">Simulate Gastropod Shell Growth Using Cellular Automata</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/ca/">Cellular Automata: Introduction</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/rag/">Rag: Retrieval-Augmented Generation </a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/cag/">CAG: Cache-Augmented Generation</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/agents/">Agents: A tutorial on building agents in python</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/courses/">Courses: Free course on Agentic AI</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/ollama/">Ollama: The local LLM solution</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/hugo/">Hugo: A Static Site Generator</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/acdb/">Project 8: acdb a super fast database for Android</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/fx-trader/">Project 7: FX-Trader</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/validator/">Project 6: Validator</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/dictator/">Project 5: Dictator</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/meth/">Project 4: Meth</a></li>
+		</ul>
+	</div>
+</div>
+<div class="widget-categories widget">
+	<h4 class="widget__title">Categories</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/agents/">agents</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/ai/">AI</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/android/">Android</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/arxiv/">arXiv</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/cellular-automata/">Cellular Automata</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/command-line/">Command Line</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/courses/">courses</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/deep-learning/">Deep Learning</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/ffmpeg/">FFmpeg</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/image-generation/">Image Generation</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/llms/">LLMs</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/machine-learning/">Machine Learning</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/multimedia/">Multimedia</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/neural-networks/">Neural Networks</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/ollama/">ollama</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/open-source/">Open Source</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/prompt-engineering/">Prompt Engineering</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/python/">Python</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/pytorch/">PyTorch</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/questions/">Questions</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/rag/">RAG</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/smolagents/">smolagents</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/stable-diffusion/">Stable Diffusion</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/svm/">SVM</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/video/">Video</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/video-processing/">Video Processing</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/whisper/">Whisper</a></li>
+		</ul>
+	</div>
+</div>
+<div class="widget-taglist widget">
+	<h4 class="widget__title">Tags</h4>
+	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/tags/ai/" title="AI">AI</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/ai-agent/" title="ai agent">ai agent</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/ai-art/" title="AI art">AI art</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/artificial-intelligence/" title="artificial intelligence">artificial intelligence</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/arxiv/" title="arxiv">arxiv</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/automation/" title="automation">automation</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/command-line/" title="command line">command line</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/deep-learning/" title="deep learning">deep learning</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/deep-research/" title="deep research">deep research</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/ffmpeg/" title="ffmpeg">ffmpeg</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/image-generation/" title="image generation">image generation</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/llms/" title="LLMs">LLMs</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/machine-learning/" title="machine learning">machine learning</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/multimedia/" title="multimedia">multimedia</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/neural-networks/" title="neural networks">neural networks</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/prompt-engineering/" title="prompt engineering">prompt engineering</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/python/" title="python">python</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/pytorch/" title="pytorch">pytorch</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/search-tool/" title="search tool">search tool</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/smolagents/" title="smolagents">smolagents</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/stable-diffusion/" title="Stable Diffusion">Stable Diffusion</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/video-editing/" title="video editing">video editing</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/video-processing/" title="video processing">video processing</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/webui/" title="WebUI">WebUI</a>
+	</div>
+</div>
+<div class="widget-social widget">
+	<h4 class="widget-social__title widget__title">Social</h4>
+	<div class="widget-social__content widget__content">
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="GitHub" rel="noopener noreferrer" href="https://github.com/ernanhughes" target="_blank">
+				<svg class="widget-social__link-icon icon icon-github" width="24" height="24" viewBox="0 0 384 374"><path d="m192 0c-106.1 0-192 85.8-192 191.7 0 84.7 55 156.6 131.3 181.9 9.6 1.8 13.1-4.2 13.1-9.2 0-4.6-.2-16.6-.3-32.6-53.4 11.6-64.7-25.7-64.7-25.7-8.7-22.1-21.3-28-21.3-28-17.4-11.9 1.3-11.6 1.3-11.6 19.3 1.4 29.4 19.8 29.4 19.8 17.1 29.3 44.9 20.8 55.9 15.9 1.7-12.4 6.7-20.8 12.2-25.6-42.6-4.8-87.5-21.3-87.5-94.8 0-20.9 7.5-38 19.8-51.4-2-4.9-8.6-24.3 1.9-50.7 0 0 16.1-5.2 52.8 19.7 15.3-4.2 31.7-6.4 48.1-6.5 16.3.1 32.7 2.2 48.1 6.5 36.7-24.8 52.8-19.7 52.8-19.7 10.5 26.4 3.9 45.9 1.9 50.7 12.3 13.4 19.7 30.5 19.7 51.4 0 73.7-44.9 89.9-87.7 94.6 6.9 5.9 13 17.6 13 35.5 0 25.6-.2 46.3-.2 52.6 0 5.1 3.5 11.1 13.2 9.2 76.2-25.5 131.2-97.3 131.2-182 0-105.9-86-191.7-192-191.7z"/></svg>
+				<span>GitHub</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Email" href="mailto:ernanhughes@gmail.com">
+				<svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 24 24"><path d="M0 3h24v18H0zm2 16h20V7l-10 6L2 7zM22 5H2l10 6z"/></svg>
+				<span>ernanhughes@gmail.com</span>
+			</a>
+		</div>
+
+		
+	</div>
+</div>
+</aside>
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2025 Programmer.ie: Modern AI programming.
+			<span class="footer__copyright-credits"></span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>
